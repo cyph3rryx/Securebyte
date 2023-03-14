@@ -22,10 +22,12 @@ pip install cryptography tkinter pyarmor
 ## Working
 
 1. SecureByte works by encrypting the payload file using AES encryption with a randomly generated key. 
-2. The key is then encrypted using RSA encryption with a public key, and both the encrypted key and the encrypted payload are embedded in a Python script stub.
-3. When the obfuscated executable is executed, the script stub is decrypted and executed. 
-4. The script then decrypts the AES key using RSA decryption with a private key, and uses the decrypted key to decrypt the payload. 
-5. The decrypted payload is then executed.
+2. The key is then encrypted using RSA encryption with a public key.
+3. The encrypted public key is then again encrypted via the ECC public key for enhanced security 
+4. Both the encrypted key and the encrypted payload are embedded in a Python script stub.
+5. When the obfuscated executable is executed, the script stub is decrypted and executed. 
+6. The script then decrypts the AES key using RSA decryption with a private key, and uses the decrypted key to decrypt the payload. 
+7. The decrypted payload is then executed.
 
 This process ensures that the payload file remains encrypted and cannot be accessed without the private key, providing an additional layer of security. The obfuscation of the executable also helps to prevent reverse engineering and tampering.
 
