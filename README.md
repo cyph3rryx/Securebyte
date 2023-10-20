@@ -11,7 +11,6 @@ You will also need to install the following packages:
 
     cryptography
     tkinter
-    pyarmor
 
 You can install these packages using pip:
 
@@ -33,7 +32,7 @@ This process ensures that the payload file remains encrypted and cannot be acces
 
 ## Usage
 
-To use SecureByte, simply run the SecureByte.py file. This will launch a GUI window that allows you to select the payload file that you want to encrypt. Once you have selected the file, click the "Encrypt Payload" button to encrypt the payload and create the executable.
+To use SecureByte, simply run the SecureByte.py file. This will launch a GUI window that allows you to select the payload file that you want to encrypt. Once you have selected the file, click the "Execute Encryption" button to encrypt the payload and create the executable.
 
 To use SecureByte, run the following command:
 
@@ -42,9 +41,7 @@ python3 securebyte.py
 ```
 
 ### Note: 
-For the next step, use only `combined.py` file generated in `dist` directory only. The reason to do is because the file in the `dist` directory is the obfuscated version of the malware whereas the `combined.py` file generated outside the `dist` directory is only an encrypted malware file.
-
-## Python to EXE Converter
+For the next step, use only `stub.py` file generated in `dist` directory only. The reason to do is because the file in the `dist` directory is the obfuscated version of the malware whereas the `stub.py` file generated outside the `dist` directory is only an encrypted malware file.
 
 ### Overview
 
@@ -57,17 +54,4 @@ This script requires Python and PyInstaller to be installed on the system.
 To install `PyInstaller`, run the following command:
 
 ` pip install pyinstaller `
-
-### Steps to run it: 
-
-1. Run the `py_to_exe.py` file
-2. Select the `combined.py` - Python file from the `dist` directory which is created after the obfuscation.
-3. Click the "Convert to EXE" button.
-4. The resulting executable file will be saved in the same directory as the Python file (`dist` directory).
-
-### Note: 
-The encrypted executable will be saved as in the same directory as the SecureByte.py file.
-
-
-
 
